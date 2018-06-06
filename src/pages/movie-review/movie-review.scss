@@ -1,0 +1,134 @@
+page-movie-review {
+
+}
+.header-image {
+    // background-image: url('/assets/imgs/interstellar.jpg');
+    // background-image: url('/assets/imgs/batman.jpg');
+    // height: 80vh;
+}
+
+ion-navbar > .back-button{
+    background-color: transparent;
+}
+
+.rating{
+    background-color: #5a5a5a;
+    padding: 26%;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    margin-top: 30px;
+    border: 3px solid #949494;
+}
+ 
+.main-content,.main-content-skleton {
+    padding: 10px;
+ 
+    color: #ababab;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0e0e0e+0,444444+100 */
+background: #0e0e0e; /* Old browsers */
+background: -moz-linear-gradient(top, #0e0e0e 0%, #444444 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #0e0e0e 0%,#444444 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #0e0e0e 0%,#444444 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#444444',GradientType=0 ); /* IE6-9 */
+}
+
+.movie-details{
+    font-size: 12px;
+}
+
+h2{
+    font-family: 'Bevan', cursive;
+    margin-top: 0.5rem;
+    color: white;
+}
+
+.circle{
+  width: 90%;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    padding: 40% 0;
+    line-height: 0;
+    position: relative;
+    background: #8f8f8f;
+    color: white;
+    font-family: Helvetica, Arial Black, sans;
+    border: 3px solid #df7777;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(165, 165, 165, 0.1)
+    }
+    50% {
+        background-color: rgba(165, 165, 165, 0.3)
+    }
+    100% {
+        background-color: rgba(165, 165, 165, 0.1)
+    }
+}
+
+$skleton-color : #737373;
+
+.skleton-type{
+    height: 1em;
+    background-color: $skleton-color;
+    width: 5em;
+    animation: pulse 1s infinite ease-in-out;
+}
+.skleton-info{
+    height: 1em;
+    background-color: $skleton-color;
+    width: 10em;
+    animation: pulse 1s infinite ease-in-out;
+}
+.skleton-rating{
+    width: 3.5em;
+    height: 3.5em;
+    background-color: $skleton-color;
+    border-radius: 50%;
+    animation: pulse 1s infinite ease-in-out;
+}
+.skleton-title{
+    height: 1.5em;
+    background-color: $skleton-color;
+    width: 10em;
+    animation: pulse 1s infinite ease-in-out;
+}
+.skleton-title{
+    height: 1.5em;
+    background-color: $skleton-color;
+    width: 10em;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.skleton-synopsis{
+    margin-left: 25%;
+    height: 1.2em;
+    background-color: $skleton-color;
+    width: 50%;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.skleton-synopsis-text > div{
+    height: 1em;
+    background-color: $skleton-color;
+    margin-bottom: 15px;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.skleton-review{
+    margin-left: 25%;
+    height: 1.2em;
+    background-color: $skleton-color;
+    width: 50%;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.skleton-review-text > div{
+    height: 1em;
+    background-color: $skleton-color;
+    margin-bottom: 15px;
+    animation: pulse 1s infinite ease-in-out;
+}

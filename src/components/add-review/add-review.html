@@ -1,0 +1,22 @@
+<!-- Generated template for the AddReviewComponent component -->
+
+<ion-row>
+  <ion-col col-12>
+    <h1>Write a Review for<br> {{data.movieName}}</h1>
+    <mat-form-field>
+      <textarea matInput rows="10"></textarea>
+    </mat-form-field>
+  </ion-col>
+  <ion-col col-12 text-center class="add-rating">
+    <ion-icon name="star" (tap)="addRating('1')" [ios]="getRating('ios','1')" [md]="getRating('android','1')"></ion-icon>
+    <ion-icon name="star" (tap)="addRating('2')" [ios]="getRating('ios','2')" [md]="getRating('android','2')"></ion-icon>
+    <ion-icon name="star" (tap)="addRating('3')" [ios]="getRating('ios','3')" [md]="getRating('android','3')"></ion-icon>
+    <ion-icon name="star" (tap)="addRating('4')" [ios]="getRating('ios','4')" [md]="getRating('android','4')"></ion-icon>
+    <ion-icon name="star" (tap)="addRating('5')" [ios]="getRating('ios','5')" [md]="getRating('android','5')"></ion-icon>
+  </ion-col>
+
+  <ion-col col-12 text-center>
+    <button mat-raised-button [mat-dialog-close]="'Review'" color="primary">OK</button>
+    <button mat-raised-button (click)="dismiss()" color="warn">Close</button>
+  </ion-col>
+</ion-row>

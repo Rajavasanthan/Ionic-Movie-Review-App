@@ -1,0 +1,178 @@
+<ion-content parallax-header>
+
+  <ion-fab right bottom (click)="openReviewModal()">
+    <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+
+
+  <div class="header-image" [ngStyle]="{'background-image': imgSrc,'height' : imgHeight}">
+    <ion-navbar transparent no-border>
+
+    </ion-navbar>
+  </div>
+
+
+  <div class="main-content">
+    <div *ngIf="contentLoaded">
+      
+        <ion-grid>
+          <ion-row>
+            <ion-col col-10>
+              <div class="movie-details"><span style="color:red;font-weight: bold;">MOVIE</span> {{movie?.year}}</div>
+              <h2>{{movie?.name}}</h2>
+              <div class="movie-details"><span *ngFor="let genreName of movie.genre;let last = last;">{{genreName}}<span *ngIf="!last">,</span></span>
+                - {{movie?.runningTime}} - {{movie?.releseDate | date}}</div>
+            </ion-col>
+            <ion-col col-2>
+              <div class="rating">8.2</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <h3 text-center>Synopsis</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+          specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+          essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+          passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <h3 text-center>Cast and Crew</h3>
+        <ion-scroll scrollX="true" style="white-space: nowrap; height:150px" direction="x">
+          <ion-col col-3 style="display: inline-block;">
+            <div style="text-align: center">
+              <img style="display: block;margin: 0 auto;" src="https://placehold.it/100x100" style="border-radius: 50%;" alt="">
+              <p>Some text</p>
+            </div>
+          </ion-col>
+          <ion-col col-3 style="display: inline-block;">
+            <div style="text-align: center">
+              <img style="display: block;margin: 0 auto;" src="https://placehold.it/100x100" style="border-radius: 50%;" alt="">
+              <p>Some text</p>
+            </div>
+          </ion-col>
+          <ion-col col-3 style="display: inline-block;">
+            <div style="text-align: center">
+              <img style="display: block;margin: 0 auto;" src="https://placehold.it/100x100" style="border-radius: 50%;" alt="">
+              <p>Some text</p>
+            </div>
+          </ion-col>
+          <ion-col col-3 style="display: inline-block;">
+            <div style="text-align: center">
+              <img style="display: block;margin: 0 auto;" src="https://placehold.it/100x100" style="border-radius: 50%;" alt="">
+              <p>Some text</p>
+            </div>
+          </ion-col>
+          <ion-col col-3 style="display: inline-block;">
+            <div style="text-align: center">
+              <img style="display: block;margin: 0 auto;" src="https://placehold.it/100x100" style="border-radius: 50%;" alt="">
+              <p>Some text</p>
+            </div>
+          </ion-col>
+          <ion-col col-3 style="display: inline-block;">
+            <div style="text-align: center">
+              <img style="display: block;margin: 0 auto;" src="https://placehold.it/100x100" style="border-radius: 50%;" alt="">
+              <p>Some text</p>
+            </div>
+          </ion-col>
+          <ion-col col-3 style="display: inline-block;">
+            <div style="text-align: center">
+              <img style="display: block;margin: 0 auto;" src="https://placehold.it/100x100" style="border-radius: 50%;" alt="">
+              <p>Some text</p>
+            </div>
+          </ion-col>
+          <ion-col col-3 style="display: inline-block;">
+            <div style="text-align: center">
+              <img style="display: block;margin: 0 auto;" src="https://placehold.it/100x100" style="border-radius: 50%;" alt="">
+              <p>Some text</p>
+            </div>
+          </ion-col>
+          <ion-col col-3 style="display: inline-block;">
+            <div style="text-align: center">
+              <img style="display: block;margin: 0 auto;" src="https://placehold.it/100x100" style="border-radius: 50%;" alt="">
+              <p>Some text</p>
+            </div>
+          </ion-col>
+
+
+
+
+
+
+        </ion-scroll>
+        <h3 text-center>Review</h3>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+                including versions of Lorem Ipsum.</p>
+            </ion-col>
+            <ion-row>
+              <ion-col col-3>
+                <img src="http://placehold.it/50x50" alt="" style="border-radius: 50%;">
+              </ion-col>
+              <ion-col col-6>
+                <h6 style="margin-top: 11px;">Name</h6>
+              </ion-col>
+              <ion-col col-12>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-row>
+          <hr style="width: 60%;border: 1px dotted white;">
+
+        </ion-grid>
+      </div>
+
+    
+  </div>
+
+  <div class="main-content-skleton" [ngStyle]="{'display' : !contentLoaded ? 'block' : 'none'}">
+  <div *ngIf="!contentLoaded">
+      <ion-grid>
+      <ion-row>
+        <ion-col col-10>
+          <div class="skleton-type"></div>
+          <!-- Movie -->
+          <h2 class="skleton-title"></h2>
+          <!-- Title -->
+          <div class="skleton-info"></div>
+          <!-- Genere and Duration -->
+        </ion-col>
+        <ion-col col-2>
+          <div class="skleton-rating"></div>
+        </ion-col>
+        <ion-col col-12>
+          <h2 class="skleton-synopsis"></h2>
+        </ion-col>
+        <ion-col col-12 class="skleton-synopsis-text">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </ion-col>
+
+        <ion-col col-12>
+          <h2 class="skleton-review"></h2>
+        </ion-col>
+        <ion-col col-12 class="skleton-review-text">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+    
+  </div>
+
+</ion-content>
